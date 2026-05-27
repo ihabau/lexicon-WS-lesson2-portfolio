@@ -3,6 +3,7 @@
   margin: 0;
   font-family: sans-serif;
   line-height: 1.3em;
+  text-align: center;
 }
 
 ul {
@@ -23,7 +24,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: lightgray;
+  background-color: #f4f4f4;
   color: white;
 }
 
@@ -34,6 +35,14 @@ section {
 #projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card img {
+  margin: 0.3em 0 0.3em 0;
+  width: 100%; /* Forces image to match card container width */
+  height: 200px; /* Sets a strict height for all project images */
+  object-fit: cover; /* Crops and centers the image cleanly without squishing it */
+  display: block; /* Removes random white spaces below the image */
 }
 
 h2 {
@@ -47,29 +56,121 @@ h2 {
 .card-content {
 }
 
-/* Center the form and make the section fill the entire screen */
+p {
+  text-align: left;
+  padding: 1em;
+}
+
+form > label,
+input,
+textarea,
+button {
+  text-align: left;
+  padding: 0;
+  padding: 0.2em 0 0.2em 0.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+footer {
+  background-color: #f4f4f4;
+}
+/* ai styling from here */
+
+/* ==========================================================================
+   GLOBAL SECTION STYLING (Applies to all page sections)
+   ========================================================================= */
+
+#projects,
+#contact,
+#about {
+  width: 100vw;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+/* ==========================================================================
+   GRID SECTIONS (Sections that layout child items in columns)
+   ========================================================================= */
+
+#projects,
+#about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 5em auto; /* Centers the section and adds vertical space */
+  align-content: center;
+}
+
+#about {
+  padding: 2em 0;
+}
+
+/* ==========================================================================
+   FLEX / FORM SECTIONS (Sections holding a centered layout box)
+   ========================================================================= */
+
 #contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Fills the full height of the screen */
-  width: 100vw; /* Fills the full width of the screen */
-  background-color: #f9f9f9;
-  font-family: sans-serif;
+  padding: 1em;
+  gap: 30px;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 5em auto; /* Centers the section and adds vertical space */
+}
+
+/* The contact form container box */
+.contact-form {
+  background-color: white; /* Added back so the box shadow looks correct */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 800px;
+  padding: 30px; /* Added back to give fields clean inner breathing room */
   box-sizing: border-box;
 }
 
-/* Make the form card stretch wide based on the viewport */
-.contact-form {
+/* ==========================================================================
+   PROJECT CARDS STYLING
+   ========================================================================= */
+
+.card {
   background-color: white;
-  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
 
-  /* Stretch rules */
-  width: 80vw; /* Stretches to cover 80% of the screen width */
-  max-width: 800px; /* Stops it from getting too huge on giant monitors */
-  box-sizing: border-box;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card-content h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 22px;
+}
+
+.card-content p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
 }
