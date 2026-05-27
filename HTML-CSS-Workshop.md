@@ -44,9 +44,9 @@ In this workshop, your task is to build and deploy a professional portfolio webs
 
 ## 🚀 Extra Challenges
 
-- [ ] **Images:** Add actual images to your project cards using `<img>`.
-- [ ] **Shadows:** Give your cards a subtle depth using `box-shadow`.
-- [ ] **Dark Mode:** Use a media query or a class to create a dark version of your site!
+- [x] **Images:** Add actual images to your project cards using `<img>`.
+- [x] **Shadows:** Give your cards a subtle depth using `box-shadow`. AI HElP
+- [x] **Dark Mode:** Use a media query or a class to create a dark version of your site!
 
 ---
 

@@ -1,9 +1,50 @@
+/* ai theme variables */
+
+/* --- LIGHT THEME (Default) --- */
+:root {
+  --bg-main: #f4f4f4;
+  --bg-secondary: #f9f9f9;
+  --bg-muted: white;
+  --bg-card: #ffffff;
+  --text-main: #333333;
+  --text-muted: #555555;
+  --shadow: rgba(0, 0, 0, 0.05);
+  --shadow-strong: rgba(0, 0, 0, 0.15);
+  --border-color: #cccccc;
+}
+
+/* --- DARK THEME --- */
+[data-theme="dark"] {
+  --bg-main: #121212; /* Deep dark gray */
+  --bg-muted: #333333;
+  --bg-secondary: #1a1a1a; /* Slightly lighter dark gray */
+  --bg-card: #1e1e1e; /* Card color */
+  --text-main: #e0e0e0; /* Soft white text */
+  --text-muted: #a0a0a0; /* Muted gray text */
+
+  --shadow: #e0e0e0; /* Soft white text */
+  --shadow-strong: #a0a0a0; /* Muted gray text */
+  /*
+  
+  --shadow: rgba(0, 0, 0, 0.5);
+  --shadow-strong: rgba(0, 0, 0, 0.7);
+
+  */
+  --border-color: #333333;
+}
+
+/* ------------------------------ */
+
 * {
   box-sizing: border-box;
   margin: 0;
   font-family: sans-serif;
   line-height: 1.3em;
   text-align: center;
+}
+
+body {
+  background-color: var(--bg-muted);
 }
 
 ul {
@@ -19,17 +60,28 @@ button:hover {
   background-color: darkgray;
 }
 
+button {
+  margin: 0 !important;
+  border-radius: 8px;
+  padding: 0.3em !important;
+  text-align: center !important;
+  width: max-content;
+  align-self: flex-end;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #f4f4f4;
-  color: white;
+  background-color: var(--bg-main); /* Changed to use variable */
+  color: var(--text-main); /* Swapped to theme text color */
 }
 
 section {
-  margin: 1em;
+  margin: 2em auto;
+  box-shadow: 0 4px 10px var(--shadow-strong); /* Changed to use variable */
+  border-radius: 8px;
 }
 
 #projects {
@@ -70,10 +122,15 @@ button {
   padding: 0.2em 0 0.2em 0.2em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  /* Added to change form box fields for dark theme */
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
 }
 
 footer {
-  background-color: #f4f4f4;
+  background-color: var(--bg-main); /* Changed to use variable */
+  color: var(--text-main); /* Swapped to theme text color */
 }
 /* ai styling from here */
 
@@ -87,7 +144,8 @@ footer {
   width: 100vw;
   font-family: sans-serif;
   box-sizing: border-box;
-  background-color: #f4f4f4;
+  background-color: var(--bg-main); /* Changed to use variable */
+  color: var(--text-main); /* Swapped to theme text color */
 }
 
 /* ==========================================================================
@@ -101,7 +159,6 @@ footer {
   gap: 30px;
   width: 80vw;
   max-width: 1200px;
-  margin: 5em auto; /* Centers the section and adds vertical space */
   align-content: center;
 }
 
@@ -121,14 +178,16 @@ footer {
   gap: 30px;
   width: 80vw;
   max-width: 1200px;
-  margin: 5em auto; /* Centers the section and adds vertical space */
+  background-color: var(
+    --bg-secondary
+  ); /* Added to support background change */
 }
 
 /* The contact form container box */
 .contact-form {
-  background-color: white; /* Added back so the box shadow looks correct */
+  background-color: var(--bg-card); /* Changed to use variable */
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px var(--shadow-strong); /* Changed to use variable */
   display: flex;
   flex-direction: column;
   width: 80vw;
@@ -142,9 +201,9 @@ footer {
    ========================================================================= */
 
 .card {
-  background-color: white;
+  background-color: var(--bg-card); /* Changed to use variable */
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px var(--shadow); /* Changed to use variable */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -155,7 +214,7 @@ footer {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px var(--shadow-strong); /* Changed to use variable */
 }
 
 .card-content {
@@ -164,12 +223,12 @@ footer {
 
 .card-content h3 {
   margin: 0 0 15px 0;
-  color: #333;
+  color: var(--text-main); /* Changed to use variable */
   font-size: 22px;
 }
 
 .card-content p {
-  color: #555;
+  color: var(--text-muted); /* Changed to use variable */
   font-size: 15px;
   line-height: 1.6;
   margin: 0;
