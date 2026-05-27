@@ -41,8 +41,8 @@ In this workshop, your task is to build and deploy a professional portfolio webs
 
 ## 🌐 Task 3: Deployment (GitHub)
 
-[ ] Deploy the project to GitHub’s hosting server using GitHub Pages, making your portfolio publicly accessible online at:  
-`https://<your-username>.github.io/<repo-name>/`
+- [ ] Deploy the project to GitHub’s hosting server using GitHub Pages, making your portfolio publicly accessible online at:  
+      `https://<your-username>.github.io/<repo-name>/`
 
 ---
 
