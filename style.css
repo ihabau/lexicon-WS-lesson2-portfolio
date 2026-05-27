@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.3em;
+}
+
+a:hover,
+button:hover {
+  background-color: darkgray;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: lightgray;
+  color: white;
+}
+
+section {
+  margin: 1em;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+h2 {
+  margin: 2em;
+}
+
+.card {
+  margin: 20px;
+}
+
+.card-content {
+}
