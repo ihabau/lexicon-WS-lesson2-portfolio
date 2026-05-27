@@ -55,6 +55,14 @@ ul {
   gap: 20px; /* Adds space between each link */
 }
 
+/* Keeps the link text color uniform in every state */
+ul li a,
+ul li a:visited,
+ul li a:active {
+  color: var(--text-main); /* Uses your theme variable color */
+  text-decoration: none; /* Removes standard underlines */
+}
+
 a:hover,
 button:hover {
   background-color: darkgray;
