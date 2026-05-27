@@ -5,6 +5,14 @@
   line-height: 1.3em;
 }
 
+ul {
+  list-style: none; /* Removes the bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Lines up the li items in a row */
+  gap: 20px; /* Adds space between each link */
+}
+
 a:hover,
 button:hover {
   background-color: darkgray;
@@ -37,4 +45,31 @@ h2 {
 }
 
 .card-content {
+}
+
+/* Center the form and make the section fill the entire screen */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Fills the full height of the screen */
+  width: 100vw; /* Fills the full width of the screen */
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* Make the form card stretch wide based on the viewport */
+.contact-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+
+  /* Stretch rules */
+  width: 80vw; /* Stretches to cover 80% of the screen width */
+  max-width: 800px; /* Stops it from getting too huge on giant monitors */
+  box-sizing: border-box;
 }
