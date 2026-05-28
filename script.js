@@ -26,3 +26,14 @@ toggleButton.addEventListener("click", () => {
   // Save the new choice in the browser memory
   localStorage.setItem("theme", newTheme);
 });
+
+const btnTop = document.querySelector(".btn-top");
+console.log(btnTop.innerText);
+btnTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "auto" });
+  history.pushState(
+    "",
+    document.title,
+    window.location.pathname + window.location.search,
+  );
+});
